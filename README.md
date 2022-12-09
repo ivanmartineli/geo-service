@@ -15,7 +15,8 @@ npm run dev
 .env
 
 # WARNING: 
-
+  
+ * Os valores dos endereços são separados por ; entre eles ex: (http://localhost:5000/geocoding?address=A;B;C) 
  * ao utilizar o serviço de geocoding(geoapify) não sei o quanto esse serviço é preciso, mas foi o que eu consegui estudar de uma maneira rápida e fazer as chamdas para obter os retornos, porém ele acaba retorando mais do que um results[] na consulta de acordo com o endereço enviado. Não sei se em outros serviços acontece o mesmo, mas uma solução paliativa foi sempre pegar as coordenadas(latitude e longitude) da primeira posição do array[0](nem sempre pegando a latitute e longitute da primeira posição, batia com o endereço fazendo a pesquisas diretamente la no google maps.) e utilizo-os para realizar o calculo entre os endereços, podendo haver uma divergência entre os valores.
 
  * está sem os testes unitários no momento, pois não consegui concluí-los. 
