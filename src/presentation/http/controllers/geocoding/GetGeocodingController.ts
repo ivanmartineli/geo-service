@@ -17,12 +17,12 @@ export class GetGeocodingController {
 
             const address = request.query.address as string
 
-            const res = await this.geoService.getGeo(address)
-            if (res.status === 400) {
-                return response.status(400).send(res)
+            const result = await this.geoService.getGeo(address)
+            if (result.status === 400) {
+                return response.status(400).send(result)
             }
 
-            return response.status(200).send('result')
+            return response.status(200).send(result)
 
         } catch (err) {
             console.log(err)

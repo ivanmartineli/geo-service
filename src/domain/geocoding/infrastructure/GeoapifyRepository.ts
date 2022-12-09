@@ -15,7 +15,7 @@ export class GeoapifyRepository implements IGeoapifyRepository {
 
     ) { }
 
-    async getGeoapify(): Promise<any> {
+    async getGeoapify(address: string): Promise<any> {
 
         const apiUrl = this.config.get().urlGeoApi.url
 
@@ -26,7 +26,7 @@ export class GeoapifyRepository implements IGeoapifyRepository {
             const res = await superagent
                 .get('https://api.geoapify.com/v1/geocode/search')
                 .query({
-                    text: 'Rua Lauro Muller, 116 Botafogo, Rio de Janeiro RJ, 22290160',
+                    text: address,
                     format: 'json',
                     apiKey: 'd52c84abe7b543df8add5bcbd45b8cfa'
                 })

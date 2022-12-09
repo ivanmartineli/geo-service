@@ -1,4 +1,4 @@
 
 export interface IGeoapifyRepository {
-    getGeoapify(): Promise<any>
+    getGeoapify(address: string): Promise<any>
 }
